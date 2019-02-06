@@ -70,7 +70,7 @@ targetInput.addEventListener('keyup', function(event){
 function getMatches(text) {
     var matchList = [];
     data.forEach(element => {
-        if(element.ad_title.toLowerCase().indexOf(text.toLowerCase()) != -1){
+        if(element.ad_title.toLowerCase().indexOf(text.toLowerCase()) != -1 && targetInput.value.length >= 4){
             matchList.push({
                 title: element.ad_title,
                 id: element.id_ad,
